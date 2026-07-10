@@ -1,0 +1,46 @@
+name: ProAuth
+version: '1.1.1'
+main: com.proauth.proauth.ProAuth
+api-version: "1.21"
+author: ProAuthTeam
+description: Advanced authentication system with Telegram 2FA
+
+commands:
+  register:
+    description: Register a new account
+    usage: /register <password> <repeat>
+    aliases: [reg, r]
+  login:
+    description: Login to your account
+    usage: /login <password>
+    aliases: [l, auth]
+  logout:
+    description: Logout from your account
+    usage: /logout
+    aliases: [exit, out]
+  changepassword:
+    description: Change your password
+    usage: /changepassword <old> <new> <repeat>
+    aliases: [changepass, cpw, passwd]
+  2fa:
+    description: Two-factor authentication management
+    usage: /2fa <enable|disable|code|status|help>
+    aliases: [telegram, tg, fa]
+  proauth:
+    description: Admin commands for ProAuth
+    usage: /proauth <unregister|session|lastlogin|lastip|del2fa|unban|stats|reload|help>
+    aliases: [pauth, pa, proa]
+    permission: proauth.admin
+  vanishlogin:
+    description: Toggle vanish login mode
+    usage: /vanishlogin
+    aliases: [vl, vanish]
+    permission: proauth.vanish
+
+permissions:
+  proauth.admin:
+    description: Admin permissions for ProAuth
+    default: op
+  proauth.vanish:
+    description: Vanish login permission
+    default: op

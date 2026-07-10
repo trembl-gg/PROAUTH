@@ -1,0 +1,38 @@
+language: en
+telemetry:
+  enabled: true
+session:
+  enabled: true
+  duration-minutes: 60
+
+login:
+  max-attempts: 3
+  ip-ban-enabled: true
+  ban-duration-seconds: 3600
+
+security:
+  min-password-length: 4
+  require-strong-password: false
+  2fa-max-attempts: 5
+  2fa-ip-ban-enabled: true
+  2fa-ban-duration-seconds: 1800
+
+telegram:
+  2fa-enabled: false
+  bot-token: "token"
+  bot-username: "username no provided"
+
+messages:
+  actionbar-enabled: true
+  use-actionbar-for-login: true
+
+protection:
+  apply-effects: true
+  block-movement: true
+  block-chat: true
+  block-commands: true
+  block-interactions: true
+
+luckperms:
+  unauthorized: unloggined
+  vanishlogin: vanishlogin
